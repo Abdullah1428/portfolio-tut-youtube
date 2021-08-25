@@ -3,22 +3,39 @@ import './menu.scss'
 import MenuItem from './MenuItem'
 
 export default function Menu({ menuOpen, setMenuOpen }) {
+  const list = [
+    {
+      id: '#intro',
+      title: 'Intro'
+    },
+    {
+      id: '#portfolio',
+      title: 'Portfolio'
+    },
+    {
+      id: '#works',
+      title: 'Works'
+    },
+    {
+      id: '#testimonials',
+      title: 'Testimonials'
+    },
+    {
+      id: '#contact',
+      title: 'Contact'
+    }
+  ]
+
   return (
     <div className={'menu ' + (menuOpen && 'active')}>
       <ul>
-        <MenuItem id='#intro' itemName='Intro' setMenuOpen={setMenuOpen} />
-        <MenuItem
-          id='#portfolio'
-          itemName='Portfolio'
-          setMenuOpen={setMenuOpen}
-        />
-        <MenuItem id='#works' itemName='Works' setMenuOpen={setMenuOpen} />
-        <MenuItem
-          id='#testimonials'
-          itemName='Testimonials'
-          setMenuOpen={setMenuOpen}
-        />
-        <MenuItem id='#contact' itemName='Contact' setMenuOpen={setMenuOpen} />
+        {list.map(item => (
+          <MenuItem
+            id={item.id}
+            itemName={item.title}
+            setMenuOpen={setMenuOpen}
+          />
+        ))}
       </ul>
     </div>
   )
