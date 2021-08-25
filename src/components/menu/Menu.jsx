@@ -31,6 +31,7 @@ export default function Menu({ menuOpen, setMenuOpen }) {
       <ul>
         {list.map(item => (
           <MenuItem
+            key={item.id}
             id={item.id}
             itemName={item.title}
             setMenuOpen={setMenuOpen}

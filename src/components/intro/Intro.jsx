@@ -12,7 +12,6 @@ export default function Intro() {
       showCursor: false,
       backDelay: 1500,
       backSpeed: 60,
-      showCursor: true,
       strings: ['Developer', 'Engineer']
     })
   }, [])
@@ -21,7 +20,7 @@ export default function Intro() {
     <div className='intro' id='intro'>
       <div className='left'>
         <div className='imgContainer'>
-          <img src='assets/me.jpeg' alt='profile picture' />
+          <img src='assets/me.jpeg' alt='profile' />
         </div>
       </div>
       <div className='right'>
