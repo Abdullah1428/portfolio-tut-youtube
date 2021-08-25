@@ -1,24 +1,24 @@
 import './menu.scss'
 
+import MenuItem from './MenuItem'
+
 export default function Menu({ menuOpen, setMenuOpen }) {
   return (
     <div className={'menu ' + (menuOpen && 'active')}>
       <ul>
-        <li>
-          <a href='#intro'>Home</a>
-        </li>
-        <li>
-          <a href='#portfolio'>Portfolio</a>
-        </li>
-        <li>
-          <a href='#works'>Works</a>
-        </li>
-        <li>
-          <a href='#testimonials'>Testimonials</a>
-        </li>
-        <li>
-          <a href='#contact'>Contact</a>
-        </li>
+        <MenuItem id='#intro' itemName='Intro' setMenuOpen={setMenuOpen} />
+        <MenuItem
+          id='#portfolio'
+          itemName='Portfolio'
+          setMenuOpen={setMenuOpen}
+        />
+        <MenuItem id='#works' itemName='Works' setMenuOpen={setMenuOpen} />
+        <MenuItem
+          id='#testimonials'
+          itemName='Testimonials'
+          setMenuOpen={setMenuOpen}
+        />
+        <MenuItem id='#contact' itemName='Contact' setMenuOpen={setMenuOpen} />
       </ul>
     </div>
   )
